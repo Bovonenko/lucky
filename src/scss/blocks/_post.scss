@@ -1,0 +1,52 @@
+.post {
+	padding: 2rem;
+	color: var(--dark-purple);
+	border: var(--border, 1px solid rgba(0, 0, 0, 0.125));
+	display: flex;
+	flex-direction: column;
+	@media (max-width: 575.98px) {
+		padding: 1.75rem;
+	}
+
+	&__img {
+		margin-bottom: 2rem;
+	}
+	&__signature {
+		margin-bottom: 1rem;
+		&_preview {
+			margin-bottom: 0.5rem;
+		}
+	}
+	&__header {
+		margin-bottom: 1rem;
+	}
+	&__text {
+		margin-bottom: 2rem;
+		flex-grow: 1;
+	}
+	&__link {
+		align-self: start;
+	}
+	&__preview {
+		color: var(--dark-purple);
+		padding: 2rem;
+		height: 100%;
+		text-decoration: none;
+		@media (max-width: 575.98px) {
+			padding: 1.75rem;
+		}
+		:visited {
+			color: var(--dark-purple);
+		}
+		@media (hover: hover) {
+			&:hover {
+				background-color: var(--light-yellow);
+			}
+		}
+		&-wrapper {
+			&:not(:last-child) {
+				border-bottom: var(--border, 1px solid rgba(0, 0, 0, 0.125));
+			}
+		}
+	}
+}

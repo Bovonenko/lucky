@@ -1,0 +1,42 @@
+.promo {
+	min-height: 25rem;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+		url("../img/promo/bg.webp") center (center/cover) no-repeat;
+	color: var(--light);
+	padding: clamp(65px, 10%, 128px) 0;
+	margin-bottom: clamp(4rem, 10%, 8rem);
+
+	&__wrapper {
+		max-width: 55rem;
+	}
+	&__label {
+		font-size: 1rem;
+		font-weight: 500;
+		margin-bottom: 1em;
+		text-transform: uppercase;
+	}
+	&__header {
+		font-size: 3.5rem;
+		font-weight: 700;
+		margin-bottom: 0.4em;
+		@media (max-width: 767.98px) {
+			font-size: 3rem;
+		}
+		@media (max-width: 575.98px) {
+			font-size: 2.5rem;
+		}
+		@media (max-width: 424.98px) {
+			font-size: 2rem;
+		}
+	}
+	&__signature {
+		margin-bottom: 1em;
+		&-author {
+			color: var(--yellow);
+		}
+	}
+	&__text {
+		max-width: 37rem;
+		margin-bottom: 3em;
+	}
+}
