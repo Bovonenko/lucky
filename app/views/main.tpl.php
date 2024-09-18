@@ -199,7 +199,7 @@ $translation_main = [
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title><?= $title ?? 'TITLE' ?></title>
 	<base href="<?= PATH ?>/">
-	<link rel="stylesheet" href="./css/style.min.css?_v=20240906154910" />
+	<link rel="stylesheet" href="./css/style.min.css?_v=20240906154911" />
 </head>
 
 <body>
@@ -432,8 +432,8 @@ $translation_main = [
 
 	<?php include("incs/footer.php"); ?>
 
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js?_v=20240906154910"></script>
-	<script src="./js/index.min.js?_v=20240906154910"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js?_v=20240906154911"></script>
+	<script src="./js/index.min.js?_v=20240906154911"></script>
 </body>
 
 </html>

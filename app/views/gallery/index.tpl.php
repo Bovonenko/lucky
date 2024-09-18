@@ -25,7 +25,7 @@ $translation_gallery = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?= $title ?? 'TITLE' ?></title>
     <base href="<?= PATH ?>/">
-    <link rel="stylesheet" href="./css/style.min.css?_v=20240906154910" />
+    <link rel="stylesheet" href="./css/style.min.css?_v=20240906154911" />
     <style>
 
     </style>
