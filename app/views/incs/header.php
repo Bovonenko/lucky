@@ -30,7 +30,7 @@ $translation_header = [
 
 <header id="header" class="header">
 	<div class="header__container">
-		<a href="/" class="header__logo">
+		<a href="<?= get_lang_path() . '/' ?>" class="header__logo">
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="0.4826754331588745 4.400000095367432 47.012569427490234 39.19999694824219" enable-background="new 0 0 48 48" xml:space="preserve" height="40" width="40" class="icon-icon-0" data-fill-palette-color="accent" id="icon-0">
 				<g fill="#ffffff" data-fill-palette-color="accent">
 					<path fill="#ffffff" d="M46.3 35.3L29.1 7.7C27.8 5.5 26 4.4 24 4.4S20.2 5.6 18.9 7.7L1.7 35.3C0.4 37.4 0.1 39.5 1 41.1S3.8 43.6 6.3 43.6H41.6C44.1 43.6 46 42.7 46.9 41.1 47.9 39.5 47.6 37.4 46.3 35.3M45.3 40.2C44.8 41.2 43.5 41.7 41.7 41.7H6.3C4.6 41.7 3.3 41.2 2.7 40.2 2.2 39.2 2.4 37.8 3.3 36.4L20.6 8.7C21.5 7.2 22.8 6.3 24 6.3 25.3 6.3 26.5 7.1 27.4 8.7L44.6 36.3C45.6 37.8 45.8 39.2 45.3 40.2" data-fill-palette-color="accent"></path>
@@ -54,18 +54,18 @@ $translation_header = [
 		<nav class="header__menu">
 			<ul id="menu" class="menu">
 				<li class="menu__item">
-					<a href="/" class="menu__link"><?= $translation_header[$_SESSION['lang']]['home'] ?></a>
+					<a href="<?= get_lang_path() . '/' ?>" class="menu__link"><?= $translation_header[$_SESSION['lang']]['home'] ?></a>
 				</li>
 				<li class="menu__item">
 					<a href="<?= PATH . get_lang_path() . '/posts' ?>" class="menu__link"> <?= $translation_header[$_SESSION['lang']]['blog'] ?> </a>
 				</li>
 				<li class="menu__item">
-					<a href="/#about" class="menu__link">
+					<a href="<?= get_lang_path() . '/#about' ?>" class="menu__link">
 						<?= $translation_header[$_SESSION['lang']]['about'] ?>
 					</a>
 				</li>
 				<li class="menu__item">
-					<a href="/#footer" class="menu__link">
+					<a href="<?= get_lang_path() . '/#footer' ?>" class="menu__link">
 						<?= $translation_header[$_SESSION['lang']]['contact'] ?>
 					</a>
 				</li>
@@ -83,8 +83,8 @@ $translation_header = [
 						</button>
 						<div class="language-options">
 							<a href="<?= PATH . '/' ?>">Česky</a>
-							<a href="<?= PATH . '/en' ?>">English</a>
-							<a href="<?= PATH . '/ru' ?>">Русский</a>
+							<a href="<?= PATH . '/en' . '/' ?>">English</a>
+							<a href="<?= PATH . '/ru' . '/' ?>">Русский</a>
 						</div>
 					</div>
 
