@@ -116,5 +116,32 @@ function convert_date($dateString) {
 
 function get_gallery_folders() {
     $folders = scandir(GALLERY);
-    return array_diff($folders, ['.', '..']);
+    return array_diff($folders, ['.', '..', 'create_thumbnails.sh']);
+}
+
+function get_gallery_folder_items($folder) {
+    $images = scandir(GALLERY . '/' . $folder);
+    return array_diff($images, ['.', '..', 'create_thumbnails.sh']);
+}
+
+function get_gallery_images($folder) {
+    $images = get_gallery_folder_items($folder);
+    $image_pairs = [];
+    foreach ($images as $image) {
+        // Check if it's a small image or full image
+        if (strpos($image, '-small') !== false) {
+            // For small images, remove '-small' to get the base name and store it
+            $baseName = str_replace('-small', '', $image);
+            $image_pairs[$baseName]['small'] = $image;
+        } else if (strpos($image, '-medium') !== false) {
+            // For medium images, remove '-medium' to get the base name and store it
+            $baseName = str_replace('-medium', '', $image);
+            $image_pairs[$baseName]['medium'] = $image;
+        } else {
+            // For full images, use the base name directly
+            $baseName = $image;
+            $image_pairs[$baseName]['full'] = $image;
+        }
+    }
+    return $image_pairs;
 }

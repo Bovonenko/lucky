@@ -64,6 +64,10 @@ $translation_main = [
 			'text' => 'Lucky Ball Billiard Club was born from a simple idea – to create the best place for billiards in Prague. We wanted to build a space where anyone, from beginners to seasoned players, could come together to enjoy the game. With this vision we are now offering a welcoming and friendly environment for all billiard lovers.',
 			'link' => 'Discover our story >',
 		],
+		'gallery' => [
+			'title' => 'Gallery',
+			'link' => 'View all photos',
+		],
 		'testimonials' => [
 			'title' => 'What people say about us',
 		],
@@ -118,6 +122,10 @@ $translation_main = [
 			'text' => 'Бильярдный клуб Lucky Ball родился из простой идеи — создать лучшее место для игры в бильярд в Праге. Мы хотели создать пространство, где любой, от новичков до опытных игроков, мог бы насладиться игрой. С этим видением мы предлагаем гостеприимную и дружескую атмосферу для всех любителей бильярда.',
 			'link' => 'Узнайте нашу историю >',
 		],
+		'gallery' => [
+			'title' => 'Галерея',
+			'link' => 'Просмотреть все',
+		],
 		'testimonials' => [
 			'title' => 'Что о нас говорят',
 		],
@@ -171,61 +179,12 @@ $translation_main = [
 			'text' => 'Klub Lucky Ball Billiard byl založen s jednoduchou myšlenkou – vytvořit nejlepší místo pro kulečník v Praze. Chtěli jsme vytvořit prostor, kde by se každý, od začátečníků po zkušené hráče, mohl sejít a užít si hru. S touto vizí nyní nabízíme přátelské a vstřícné prostředí pro všechny milovníky kulečníku.',
 			'link' => 'Objevte náš příběh >',
 		],
+		'gallery' => [
+			'title' => 'Galerie',
+			'link' => 'Zobrazit všechny fotky',
+		],
 		'testimonials' => [
 			'title' => 'Co o nás říkají',
-		],
-	],
-	'uk' => [
-		'general' => [
-			'link' => 'Детальніше >'
-		],
-		'promo' => [
-			'header' => 'Ласкаво просимо до клубу Lucky Ball Billiard!',
-			'date' => '23 травня 2022',
-			'text' => 'Чи ви є шанувальником більярду, чи просто шукаєте чудове місце для відпочинку з друзями, у нас є все, що вам потрібно для веселої та спокійної гри.',
-		],
-		'posts' => [
-			'featured' => 'Рекомендований пост',
-			'latest' => 'Останні пости',
-			'all' => 'Переглянути всі',
-		],
-		'about' => [
-			'label' => 'ПРО НАС',
-			'title' => 'Ми пропонуємо дружню атмосферу для гри в більярд',
-			'text' => 'Завдяки навчанням, регулярним турнірам і дружній атмосфері ми раді зробити більярд доступним та захоплюючим для всіх.',
-			'mission' => 'НАША МІСІЯ',
-			'mission_title' => 'Ми прагнемо створити спокійне та приємне місце.',
-			'mission_text' => 'Наша місія — створити гостинну та приємну атмосферу для любителів більярду будь-якого рівня майстерності. Ми пропонуємо різноманітні послуги, зокрема найкращі більярдні столи, професійне навчання, бар і регулярні турніри.',
-		],
-		'categories' => [
-			'title' => 'Ми пропонуємо різноманітні послуги',
-			'items' => [
-				[
-					'title' => 'Якісні столи',
-					'text' => 'Грайте на нових столах для піраміди, пулу та снукеру.',
-				],
-				[
-					'title' => 'Навчання',
-					'text' => 'Навчайтеся у наших досвідчених тренерів з понад 10-річним досвідом, доступних у вихідній школі більярду.',
-				],
-				[
-					'title' => 'Бар',
-					'text' => 'Розслабтеся та насолодіться напоями в нашому барі з широким вибором напоїв та закусок.',
-				],
-				[
-					'title' => 'Турніри',
-					'text' => 'Беріть участь у наших регулярних турнірах і змагайтеся з іншими гравцями за можливість виграти призи.',
-				],
-			],
-		],
-		'special' => [
-			'label' => 'Чому ми почали',
-			'title' => 'Lucky Ball',
-			'text' => 'Клуб Lucky Ball Billiard виник з простої ідеї – створити найкраще місце для більярду в Празі. Ми хотіли створити простір, де будь-хто, від початківців до досвідчених гравців, міг би насолодитися грою. З цим баченням ми тепер пропонуємо привітну та дружню атмосферу для всіх любителів більярду.',
-			'link' => 'Дізнайтеся нашу історію >',
-		],
-		'testimonials' => [
-			'title' => 'Що про нас кажуть',
 		],
 	],
 ];
@@ -241,9 +200,6 @@ $translation_main = [
 	<title><?= $title ?? 'TITLE' ?></title>
 	<base href="<?= PATH ?>/">
 	<link rel="stylesheet" href="./css/style.min.css?_v=20240906154910" />
-	<style>
-
-	</style>
 </head>
 
 <body>
@@ -270,10 +226,9 @@ $translation_main = [
 			<div class="posts__featured">
 
 				<div class="post">
-					<img
-						class="post__img"
-						src="./img/promo/bg.webp"
-						alt="Featured Post Image" />
+					<div class="post__img">
+						<img src="./img/promo/bg.webp" />
+					</div>
 					<div class="post__content-wrapper">
 						<p class="signature post__signature">
 							<span class="signature__date">
@@ -398,9 +353,86 @@ $translation_main = [
 		</div>
 	</section>
 
+	<section class="gallery-grid">
+		<div class="gallery-grid__container" id="gallery-container">
+			<div class="gallery-grid__title-wrapper">
+				<h2>
+					<?= $translation_main[$_SESSION['lang']]['gallery']['title'] ?>
+				</h2>
+				<a href="<?= PATH . get_lang_path() . '/gallery' ?>" class="gallery-grid__link">
+					<?= $translation_main[$_SESSION['lang']]['gallery']['link'] ?>
+				</a>
+			</div>
+
+			<div class="gallery" id="gallery-grid">
+				<figure class="gallery__item gallery__item--1">
+					<a data-fslightbox="gallery" href="./img/gallery-grid/pyramid_table_with_cues_5.webp" style="background-image: url(./img/gallery-grid/pyramid_table_with_cues_5-small.webp);" class="blurred">
+						<img
+							class="gallery__img"
+							loading="lazy"
+							src="./img/gallery-grid/pyramid_table_with_cues_5-medium.webp" />
+					</a>
+				</figure>
+				<figure class="gallery__item gallery__item--2">
+					<a data-fslightbox="gallery" href="./img/gallery-grid/pool_tables.webp" style="background-image: url(./img/gallery-grid/pool_tables-small.webp);" class="blurred">
+						<img
+							class="gallery__img"
+							loading="lazy"
+							src="./img/gallery-grid/pool_tables-medium.webp" />
+					</a>
+				</figure>
+				<figure class="gallery__item gallery__item--3">
+					<a data-fslightbox="gallery" href="./img/gallery-grid/pool_table_with_triangle.webp" style="background-image: url(./img/gallery-grid/pool_table_with_triangle-small.webp);" class="blurred">
+						<img
+							class="gallery__img"
+							loading="lazy"
+							src="./img/gallery-grid/pool_table_with_triangle-medium.webp" />
+					</a>
+				</figure>
+				<figure class="gallery__item gallery__item--4">
+					<a data-fslightbox="gallery" href="./img/gallery-grid/pyramid_table_with_cues_2.webp" style="background-image: url(./img/gallery-grid/pyramid_table_with_cues_2-small.webp);" class="blurred">
+						<img
+							class="gallery__img"
+							loading="lazy"
+							src="./img/gallery-grid/pyramid_table_with_cues_2-medium.webp" />
+					</a>
+				</figure>
+			</div>
+
+			<div class="gallery-slider" id="gallery-slider">
+				<swiper-container init="true" pagination="true" autoplay="false">
+					<swiper-slide lazy="true">
+						<img
+							class="gallery__img"
+							loading="lazy"
+							src="./img/gallery-grid/pyramid_table_with_cues-medium.webp" />
+					</swiper-slide>
+					<swiper-slide lazy="true">
+						<img
+							class="gallery__img"
+							loading="lazy"
+							src="./img/gallery-grid/pool_tables-medium.webp" />
+					</swiper-slide>
+					<swiper-slide lazy="true">
+						<img
+							class="gallery__img"
+							loading="lazy"
+							src="./img/gallery-grid/pool_table_with_triangle-medium.webp" />
+					</swiper-slide>
+					<swiper-slide lazy="true">
+						<img
+							class="gallery__img"
+							loading="lazy"
+							src="./img/gallery-grid/pyramid_table_with_cues_2-medium.webp" />
+					</swiper-slide>
+				</swiper-container>
+			</div>
+		</div>
+	</section>
 
 	<?php include("incs/footer.php"); ?>
 
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js?_v=20240906154910"></script>
 	<script src="./js/index.min.js?_v=20240906154910"></script>
 </body>
 

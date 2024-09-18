@@ -15,11 +15,6 @@ $translation_footer = [
         'blog' => 'Блог',
         'about' => 'О нас',
     ],
-    'uk' => [
-        'home' => 'Головна',
-        'blog' => 'Блог',
-        'about' => 'Про нас',
-    ],
 ]
 ?>
 
@@ -28,7 +23,17 @@ $translation_footer = [
     <div class="footer__container">
         <div class="footer__top">
             <a href="/" class="footer__logo">
-                <img src="./img/header/logo.svg" alt="logo" />
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="0.4826754331588745 4.400000095367432 47.012569427490234 39.19999694824219" enable-background="new 0 0 48 48" xml:space="preserve" height="40" width="40" class="icon-icon-0" data-fill-palette-color="accent" id="icon-0">
+                    <g fill="#ffffff" data-fill-palette-color="accent">
+                        <path fill="#ffffff" d="M46.3 35.3L29.1 7.7C27.8 5.5 26 4.4 24 4.4S20.2 5.6 18.9 7.7L1.7 35.3C0.4 37.4 0.1 39.5 1 41.1S3.8 43.6 6.3 43.6H41.6C44.1 43.6 46 42.7 46.9 41.1 47.9 39.5 47.6 37.4 46.3 35.3M45.3 40.2C44.8 41.2 43.5 41.7 41.7 41.7H6.3C4.6 41.7 3.3 41.2 2.7 40.2 2.2 39.2 2.4 37.8 3.3 36.4L20.6 8.7C21.5 7.2 22.8 6.3 24 6.3 25.3 6.3 26.5 7.1 27.4 8.7L44.6 36.3C45.6 37.8 45.8 39.2 45.3 40.2" data-fill-palette-color="accent"></path>
+                        <circle fill="#ffffff" cx="24" cy="35.2" r="5.8" data-fill-palette-color="accent"></circle>
+                        <circle fill="#ffffff" cx="35.5" cy="35.2" r="5.8" data-fill-palette-color="accent"></circle>
+                        <circle fill="#ffffff" cx="24" cy="15.2" r="5.8" data-fill-palette-color="accent"></circle>
+                        <circle fill="#ffffff" cx="18.2" cy="25.2" r="5.8" data-fill-palette-color="accent"></circle>
+                        <circle fill="#ffffff" cx="29.8" cy="25.2" r="5.8" data-fill-palette-color="accent"></circle>
+                        <circle fill="#ffffff" cx="12.5" cy="35.2" r="5.8" data-fill-palette-color="accent"></circle>
+                    </g>
+                </svg>
             </a>
             <nav class="footer__nav">
                 <ul class="footer__list">
@@ -36,7 +41,7 @@ $translation_footer = [
                         <a href="/" class="footer__list-link"><?= $translation_footer[$_SESSION['lang']]['home'] ?></a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="/#about" class="footer__list-link">
+                        <a href="<?= PATH . get_lang_path() . '/posts' ?>" class="footer__list-link">
                             <?= $translation_footer[$_SESSION['lang']]['blog'] ?>
                         </a>
                     </li>
@@ -73,11 +78,11 @@ $translation_footer = [
                     <a href="mailto:info@luckyball-billiard.com">info@luckyball-billiard.com</a>
                 </p>
                 <p>
-                    <a href="tel:+420774233299"> +420 774 233 299</a>
+                    <a href="tel:+420777052095"> +420 777 052 095</a>
                 </p>
             </div>
             <div class="footer__socials">
-                <a href="tel:+420774233299">
+                <a href="tel:+420777052095">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         id="Layer_1"
@@ -104,7 +109,7 @@ $translation_footer = [
                 </a>
 
                 <a
-                    href="https://www.facebook.com/profile.php?id=100089614073082"
+                    href="https://www.instagram.com/luckyball_billiard?igsh=bTNuZjd2MzY1aHBo&utm_source=qr"
                     target="_blank">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +134,7 @@ $translation_footer = [
                     </svg>
                 </a>
                 <a
-                    href="https://www.facebook.com/profile.php?id=100089614073082"
+                    href="https://www.facebook.com/profile.php?id=61565971083030"
                     target="_blank">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +170,7 @@ $translation_footer = [
                     <a href="mailto:info@luckyball-billiard.com">info@luckyball-billiard.com</a>
                 </p>
                 <p>
-                    <a href="tel:+420774233299"> +420 774 233 299</a>
+                    <a href="tel:+420777052095"> +420 777 052 095</a>
                 </p>
             </div>
             <div class="contacts-and-copyright__copyright">

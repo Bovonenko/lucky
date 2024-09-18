@@ -1,0 +1,9 @@
+.error {
+	margin-bottom: clamp(4rem, 10%, 8rem);
+	&-link {
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		background-color: var(--yellow);
+		color: var(--dark-purple);
+	}
+}

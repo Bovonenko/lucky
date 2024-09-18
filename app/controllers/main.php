@@ -12,6 +12,7 @@ $posts = $db->query("SELECT p.slug, p.created_at, pt.title, pt.body FROM posts p
 
 $post = $db->query("SELECT p.slug, p.created_at, pt.title, pt.body FROM posts p JOIN post_translations pt ON p.id = pt.post_id WHERE pt.language_code = ? AND p.slug = ?;", [$lang, $slug])->findOrFail();
 
+$images = get_gallery_images('all');
 
 // $post = '<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, repudiandae iusto mollitia, natus repellendus excepturi obcaecati, dicta labore similique minima alias nostrum dolore soluta nam laborum eos inventore eum porro?</p>
 // <p>Facere ullam aliquam, dolor perferendis corrupti veniam provident eligendi! Id veritatis corrupti sed adipisci consectetur labore debitis officiis, quasi ut obcaecati ea dolorum repudiandae repellendus aut aperiam? Quaerat, molestias eaque?</p>

@@ -1,16 +1,20 @@
 <?php
+$lang = get_lang();
 $translation_404 = [
     'en' => [
-        'error' => '404 - Page not found!',
+        'header' => '404 - Page not found!',
+        'text' => 'The page you\'ve requested can not be displayed. It appears you\'ve missed your intended destination, either through a bad or outdated link, or a typo in the page you were hoping to reach.',
+        'link' => 'Back to home',
     ],
     'cs' => [
-        'error' => '404 - Stránka nenalezena!',
+        'header' => '404 - Stránka nenalezena!',
+        'text' => 'Požadovaná stránka nebyla nalezena.',
+        'link' => 'Zpět na domovskou stránku',
     ],
     'ru' => [
-        'error' => '404 - Страница не найдена!',
-    ],
-    'uk' => [
-        'error' => '404 - Сторінка не знайдена!',
+        'header' => '404 - Страница не найдена!',
+        'text' => 'Запрошенная страница не существует. Это бывает, если вы набрали неправильный адрес либо перешли по устаревшей ссылке.',
+        'link' => 'На главную',
     ],
 ]
 
@@ -29,8 +33,27 @@ $translation_404 = [
 <body>
     <?php require VIEWS . '/incs/header.php' ?>
 
-    <section>
-        <h3><?= $translation_404[$_SESSION['lang']]['error'] ?></h3>
+    <section class="promo">
+        <div class="promo__container">
+            <div class="promo__wrapper"></div>
+        </div>
+    </section>
+
+
+    <section class="error">
+        <div class="error__container" style="display: grid; place-items: center">
+            <h1>
+                <?= $translation_404[$_SESSION['lang']]['header'] ?>
+            </h1>
+
+            <p class="promo__text">
+                <?= $translation_404[$_SESSION['lang']]['text'] ?>
+            </p>
+
+            <a href="<?= PATH . get_lang_path() ?>/" class="error-link">
+                <?= $translation_404[$_SESSION['lang']]['link'] ?>
+            </a>
+        </div>
     </section>
 
     <?php require VIEWS . '/incs/footer.php' ?>

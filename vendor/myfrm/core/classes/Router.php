@@ -43,7 +43,18 @@ class Router {
             }
         }
         if (!$matches) {
+            $this->add_lang_to_params();
             abort();
+        }
+    }
+
+    private function add_lang_to_params() {
+        $matches = [];
+        preg_match("#/(?P<lang>[a-z-]+)/#", $this->uri, $matches);
+        foreach ($matches as $k => $v) {
+            if (is_string($k) && $k === 'lang') {
+                self::$route_params[$k] = $v;
+            }
         }
     }
 
